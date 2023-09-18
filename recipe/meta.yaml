@@ -1,5 +1,5 @@
 {% set name = "blake3" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e298e7c8e56ab37a1942b9c595f15f72695b5a31c4e8ac9957fc8e4df14a3109
+  sha256: 0a78908b6299fd21dd46eb00fa4592b259ee419d586d545a3b86e1f2e4d0ee6d
 
 build:
   number: 0
@@ -18,13 +18,13 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - maturin >=0.14,<0.15                   # [build_platform != target_platform]
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
   host:
-    - maturin
+    - maturin >=0.14,<0.15
     - pip
     - python
-    - rust
     - toml
   run:
     - python
