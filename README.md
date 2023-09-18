@@ -1,11 +1,11 @@
-About blake3
-============
+About blake3-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blake3-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/oconnor663/blake3-py
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blake3-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python bindings for the Rust blake3 crate
 
