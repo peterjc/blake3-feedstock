@@ -11,7 +11,7 @@ source:
   sha256: 0625c8679203d5a1d30f859696a3fd75b2f50587984690adab839ef112f4c043
 
 build:
-  number: 0
+  number: 1
   script: 
     - {{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -44,7 +44,11 @@ test:
 about:
   home: https://github.com/oconnor663/blake3-py
   summary: Python bindings for the Rust blake3 crate
-  license: Apache-2.0
+  description: |
+    BLAKE3 is a cryptographic hash function that is much faster than MD5, SHA-1, SHA-2, SHA-3, and BLAKE2.
+
+    This conda package is the Python bindings for the Rust blake3 crate. If you are looking for the
+    reference implementation of BLAKE3 as a command line tool, see the b3sum conda package instead.
   license_file:
     - LICENSE
     - THIRDPARTY.yml
